@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Contact — Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-fixes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ========= CONTACT PAGE — PREMIUM SaaS LAYOUT ========= */
+        .contact-hero {
+            padding: 80px 0 60px;
+            background: var(--bg-light);
+        }
+
+        /* ---- 2-Column Grid ---- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        /* ---- LEFT COLUMN ---- */
+        .contact-left-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-title {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 600;
+            letter-spacing: -1.5px;
+            line-height: 1.05;
+            color: var(--text-dark);
+            margin-bottom: 32px;
+        }
+
+        .contact-lead {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #111;
+            line-height: 1.7;
+            letter-spacing: -0.15px;
+        }
+
+        .contact-body {
+            font-size: 1rem;
+            color: #6B7280;
+            line-height: 1.75;
+            margin-top: 16px;
+        }
+
+        /* ---- Profile Card ---- */
+        .contact-profile-card {
+            margin-top: 40px;
+            background: #F9FAFB;
+            border: 1px solid #F3F4F6;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-profile-card__header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .contact-profile-card__name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #111;
+            line-height: 1.3;
+        }
+
+        .contact-profile-card__role {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-top: 2px;
+        }
+
+        .contact-profile-card__email {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-decoration: none;
+            word-break: break-all;
+            transition: color 0.2s;
+        }
+
+        .contact-profile-card__email:hover {
+            color: #4B5563;
+        }
+
+        .contact-profile-card__bio {
+            font-size: 0.925rem;
+            color: #6B7280;
+            line-height: 1.65;
+        }
+
+        .contact-profile-card__links {
+            display: flex;
+            gap: 16px;
+            padding-top: 4px;
+            border-top: 1px solid #F3F4F6;
+        }
+
+        .contact-profile-card__links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #111;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-profile-card__links a:hover {
+            color: #6B7280;
+        }
+
+        /* ---- RIGHT COLUMN : FORM ---- */
+        .form-box {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        .form-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+            line-height: 1.15;
+            color: var(--text-dark);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        /* ---- FAQ SECTION ---- */
+        .faq-section {
+            padding: 160px 0;
+            background: var(--bg-white);
+            border-radius: 40px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .faq-title {
+            font-size: 5.5rem;
+            font-weight: 500;
+            letter-spacing: -3px;
+            margin-top: 16px;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 32px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .faq-number {
+            color: #999;
+            font-weight: 400;
+        }
+
+        .faq-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #F8F8F8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .contact-footer-custom {
+            background: #0D0D0D;
+            color: white;
+            padding-top: 0;
+        }
+
+        .contact-footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            padding: 120px 0;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body class="contact-page">
+
+    <!-- ========= NAVBAR ========= -->
+    <nav class="navbar" id="navbar">
+        <div class="container"
+            style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;">
+            <a href="index.html" class="navbar__logo"
+                style="text-decoration: none; font-weight: 600; font-size: 1.25rem; display: flex; align-items: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" fill="none" width="24" height="24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#85FF00" />
+                    <path d="M2 17l10 5 10-5" stroke="#85FF00" stroke-width="2" />
+                    <path d="M2 12l10 5 10-5" stroke="#85FF00" stroke-width="2" />
+                </svg>
+                Webstack
+            </a>
+
+            <div class="navbar__links">
+                <a href="index.html#projects" style="text-decoration: none; font-weight: 500;">Projects</a>
+                <a href="contact.html" style="text-decoration: none; font-weight: 500;">About & Contact</a>
+            </div>
+
+            <div class="navbar__right" style="display: flex; align-items: center; gap: 24px;">
+                <span class="navbar__email">Email: maniyassir65@gmail.com</span>
+                <a href="contact.html" class="btn btn--lime">Contact me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========= ABOUT & CONTACT HERO ========= -->
+    <section class="contact-hero">
+        <div class="container">
+
+            <div class="contact-grid">
+
+                <!-- ====== LEFT COLUMN ====== -->
+                <div class="contact-left-col">
+
+                    <!-- Status Pill -->
+                    <div class="pill"
+                        style="border:none; padding-left:0; font-size:0.9rem; background:transparent; margin-bottom:16px;">
+                        <span class="pill-dot" style="background: var(--lime);"></span>
+                        Available for consulting & dev
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="contact-title">About me</h1>
+
+                    <!-- Lead Paragraph -->
+                    <p class="contact-lead">
+                        I specialize in turning complex technical requirements into scalable software and automated
+                        ecosystems.
+                    </p>
+
+                    <!-- Body Paragraph -->
+                    <p class="contact-body">
+                        With a strong background in Full-Stack architecture (Laravel, React) and Data Engineering
+                        (Python), I don't just write code—I help companies eliminate technical debt, launch robust SaaS
+                        products, and build infrastructures that drive real business value.
+                    </p>
+
+                    <!-- Profile Card -->
+                    <div class="contact-profile-card">
+                        <div class="contact-profile-card__header">
+                            <img src="assets/profile.png" alt="Yassir Mani" class="contact-avatar cms-profile-img">
+                            <div>
+                                <div class="contact-profile-card__name">Yassir Mani</div>
+                                <div class="contact-profile-card__role">Software Engineer</div>
+                            </div>
+                        </div>
+
+                        <a href="mailto:maniyassir65@gmail.com"
+                            class="contact-profile-card__email">maniyassir65@gmail.com</a>
+
+                        <p class="contact-profile-card__bio">
+                            Based in Morocco, working globally. I architect high-performance systems and automate
+                            complex workflows for ambitious businesses.
+                        </p>
+
+                        <div class="contact-profile-card__links">
+                            <a href="https://www.linkedin.com/in/yassir-mani-870960349" target="_blank">LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ====== RIGHT COLUMN : FORM ====== -->
+                <div style="padding-top: 120px;">
+                    <div class="form-box" id="form">
+                        <h2 class="form-title">Let's get in touch</h2>
+                        <form class="contact-form" id="contactForm" action="https://formsubmit.co/maniyassir65@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="New Contact from Portfolio Website!">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" required
+                                placeholder="Tell me about your project, your timeline, and the technical challenges you are facing..."></textarea>
+                            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                            <p id="formStatus" style="display:none; text-align:center; font-size:0.95rem; font-weight:500; margin-top:16px;"></p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= FAQS ========= -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <div class="pill" style="border: none; font-size:1rem; padding-left:0; background:transparent;">
+                    <span class="pill-dot" style="background: var(--lime);"></span>
+                    <span style="color:#666;">{05} — FAQ</span>
+                </div>
+                <h2 class="faq-title">Got Questions?</h2>
+            </div>
+
+            <div class="faq-list" id="faq-list">
+                <!-- FAQs will be injected here via CMS -->
+                <div style="text-align: center; color: #888; padding: 40px;">Loading FAQs...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= MARQUEE STATS ========= -->
+    <div class="marquee-wrapper" style="background:#0D0D0D; color:var(--lime); margin-top:0;">
+        <div class="marquee-content">
+            <div class="marquee-item" style="font-weight:500;">
+                <span class="marquee-highlight">100k+</span> / <span style="color: #ccc;">Data rows processed</span>
+                <span class="marquee-asterisk">✳</span>
+                <span class="marquee-highlight">4</span> / <span style="color: white;">Enterprise Level Projects</span>
+                <span class="marquee-asterisk">✳</span>
+                <span class="marquee-highlight">100%</span> / <span style="color: #ccc;">Client Retention</span>
+                <span class="marquee-asterisk">✳</span>
+                <span class="marquee-highlight">2</span> / <span style="color: white;">Major Institutions Served</span>
+                <span class="marquee-asterisk">✳</span>
+            </div>
+            <div class="marquee-item" style="font-weight:500;">
+                <span class="marquee-highlight">100k+</span> / <span style="color: #ccc;">Data rows processed</span>
+                <span class="marquee-asterisk">✳</span>
+                <span class="marquee-highlight">4</span> / <span style="color: white;">Enterprise Level Projects</span>
+                <span class="marquee-asterisk">✳</span>
+                <span class="marquee-highlight">100%</span> / <span style="color: #ccc;">Client Retention</span>
+                <span class="marquee-asterisk">✳</span>
+                <span class="marquee-highlight">2</span> / <span style="color: white;">Major Institutions Served</span>
+                <span class="marquee-asterisk">✳</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========= CONTACT FOOTER ========= -->
+    <footer class="footer contact-footer-custom">
+
+        <div class="container"
+            style="display:flex; justify-content:space-between; align-items:center; padding: 32px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <span class="pill-dot" style="background:var(--lime);"></span>
+                <span style="font-size:0.9rem; color:#ccc;">Available for consulting & dev</span>
+            </div>
+            <a href="#navbar"
+                style="color:#ccc; font-size:0.9rem; text-decoration:none; display:flex; align-items:center; gap:12px;">Back
+                to top <span
+                    style="width:32px;height:32px;background:white;color:black;border-radius:50%;display:flex;align-items:center;justify-content:center;">↑</span></a>
+        </div>
+
+        <div class="container contact-footer-grid">
+
+            <!-- Left Side (Text) -->
+            <div>
+                <h2
+                    style="font-size:clamp(2rem, 3.5vw, 3.5rem); line-height:1.05; font-weight:700; letter-spacing:-1.5px; margin-bottom:48px;">
+                    Ready to build<br>high-performance<br>infrastructure<span style="color:var(--lime);">.</span>
+                </h2>
+                <p style="color:#aaa; font-size:1.1rem;">Let's scale your business</p>
+            </div>
+
+            <!-- Right Side (Details & Contact) -->
+            <div
+                style="display:flex; flex-direction:column; justify-content:center; gap:24px; border-left:1px solid rgba(255,255,255,0.05); padding-left:80px;">
+
+                <div style="display:flex; align-items:center; gap:24px;">
+                    <img src="assets/profile.png" alt="Yassir Mani" class="cms-profile-img"
+                        style="width:72px; height:72px; border-radius:50%; border:3px solid rgba(255,255,255,0.1);">
+                    <div>
+                        <h3 style="color:white; font-size:1.3rem; font-weight:500; margin-bottom:4px;">Yassir Mani</h3>
+                        <p style="color:#888;">Software Engineer</p>
+                        <div class="contact-social-icons" style="margin-top:8px;">
+                            <a href="https://www.linkedin.com/in/yassir-mani-870960349" target="_blank"
+                                style="color:#888;">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p style="color:#888; font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Contact me</p>
+                    <a href="mailto:maniyassir65@gmail.com"
+                        style="font-size:clamp(1.1rem, 2vw, 1.6rem); letter-spacing:-0.5px; text-decoration:none; font-weight:600; display:block; word-break:break-all; line-height:1.2; color:white;">maniyassir65@gmail.com</a>
+                </div>
+
+                <p style="color:#aaa; font-size:0.95rem; line-height:1.7; max-width:400px;">Looking for a technical
+                    partner to build scalable software, automate your operations, or launch your next SaaS? Let's
+                    talk business.</p>
+
+                <div>
+                    <a href="#form"
+                        style="display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:white; color:#111; font-weight:600; font-size:0.95rem; border-radius:100px; text-decoration:none; transition:background 0.2s; width:fit-content;"
+                        onmouseover="this.style.background='#e5e5e5'" onmouseout="this.style.background='white'">
+                        Book a call
+                        <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; background:rgba(0,0,0,0.1); border-radius:50%; font-size:0.85rem;">↗</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom"
+            style="display:flex; justify-content:space-between; align-items:center; padding:32px 0; border-top:1px solid rgba(255,255,255,0.05); font-size:0.9rem; color:#888;">
+            <div class="navbar__logo"
+                style="color:white; filter: grayscale(1) brightness(2); display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:600;">
+                <svg viewBox="0 0 24 24" fill="none" width="24" height="24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#85FF00" />
+                    <path d="M2 17l10 5 10-5" stroke="#85FF00" stroke-width="2" />
+                    <path d="M2 12l10 5 10-5" stroke="#85FF00" stroke-width="2" />
+                </svg>
+                Webstack
+            </div>
+            <p style="display:flex; gap:32px;"><span>Copyright © Software Engineering &amp; Development, 2026</span></p>
+            <p>Created by <img src="assets/profile.png" class="cms-profile-img"
+                    style="width:24px;height:24px;border-radius:50%;vertical-align:middle;margin:0 8px;object-fit:cover;">
+                <span style="color:white;font-weight:500;">Yassir Mani</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=19"></script>
+</body>
+
+</html>

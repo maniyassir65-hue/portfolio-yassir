@@ -1,0 +1,152 @@
+  <!-- ========= TOOLBOX ========= -->
+  <section class="toolbox" id="toolbox">
+    <div class="container">
+      <div class="section-header">
+        <h2>My creative<br>toolbox</h2>
+      </div>
+
+      <div class="toolbox-grid">
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-icon" style="background:#4A2FE4; color:white;">F</div>
+            <span class="tool-percent-pill">80%</span>
+          </div>
+          <div class="tool-info">
+            <h3>Framer</h3>
+            <p>No-code website builder</p>
+          </div>
+          <div class="tool-bar-wrapper">
+            <div class="tool-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-icon" style="background:#000; color:#00D1FF;">figma</div>
+            <span class="tool-percent-pill">90%</span>
+          </div>
+          <div class="tool-info">
+            <h3>Figma</h3>
+            <p>Leading collaborative design tool</p>
+          </div>
+          <div class="tool-bar-wrapper">
+            <div class="tool-bar" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-icon" style="background:#001E36; color:#31A8FF; font-weight:800; font-size:1.5rem;">Ps</div>
+            <span class="tool-percent-pill">60%</span>
+          </div>
+          <div class="tool-info">
+            <h3>Adobe Photoshop</h3>
+            <p>Raster graphics editor by Adobe</p>
+          </div>
+          <div class="tool-bar-wrapper">
+            <div class="tool-bar" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PROCESS ========= -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <h2>How it works</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">/01</div>
+          <div class="pill process-badge">Discovery</div>
+          <h3>We'll dive deep into your personal goals and long-term vision</h3>
+          <ul>
+            <li><span class="list-dot"></span> <strong>Initial Consultation:</strong> Understand the client's vision, goals, and target audience.</li>
+            <li><span class="list-dot"></span> <strong>Research:</strong> Analyze competitors and industry trends to gather insights.</li>
+            <li><span class="list-dot"></span> <strong>Define Scope:</strong> Set the project's objectives, deliverables, and timelines.</li>
+          </ul>
+          <div class="process-time">/3-5 days/</div>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">/02</div>
+          <div class="pill process-badge">Design</div>
+          <h3>I'll create mockups that bring your brand to life</h3>
+          <ul>
+            <li><span class="list-dot"></span> <strong>Wireframing:</strong> Create low-fidelity wireframes to map out the site's structure.</li>
+            <li><span class="list-dot"></span> <strong>Style Guide:</strong> Develop a design language including colors, fonts.</li>
+          </ul>
+          <div class="process-time">/1-2 weeks/</div>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-number">/03</div>
+          <div class="pill process-badge">Build</div>
+          <h3>Using no-code tools, I'll construct your site</h3>
+          <ul>
+            <li><span class="list-dot"></span> <strong>Page Construction:</strong> Build out the website structure.</li>
+            <li><span class="list-dot"></span> <strong>Content Integration:</strong> Import and format content.</li>
+          </ul>
+          <div class="process-time">/1 week/</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="footer">
+    <div class="marquee-wrapper" style="border-bottom: 1px solid rgba(255,255,255,0.1); border-top: none;">
+      <div class="marquee-content">
+        <div class="marquee-item">
+          <strong>E-commerce</strong> <span class="marquee-asterisk">✳</span> <strong>Corporate website</strong> <span class="marquee-asterisk">✳</span> <strong>Landing page</strong> <span class="marquee-asterisk">✳</span>
+        </div>
+        <div class="marquee-item">
+          <strong>E-commerce</strong> <span class="marquee-asterisk">✳</span> <strong>Corporate website</strong> <span class="marquee-asterisk">✳</span> <strong>Landing page</strong> <span class="marquee-asterisk">✳</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__container">
+      <div class="footer__heading">
+        <div class="pill" style="margin-bottom: 32px; border-color: rgba(255,255,255,0.2);">
+          <span class="pill-dot"></span>
+          Available for freelance
+        </div>
+        <h2>Let's create something<br>extraordinary<br>together<span class="marquee-highlight">.</span></h2>
+      </div>
+
+      <div class="footer-cta-card">
+        <div class="hero__profile-header" style="margin-bottom: 24px;">
+          <div class="hero__avatar">
+            <img src="assets/profile.png" alt="Andrew Scott">
+          </div>
+          <div class="hero__info">
+            <h3 style="color:var(--text-dark);">Andrew Scott</h3>
+            <p style="color:rgba(0,0,0,0.6);">Web-designer, developer</p>
+          </div>
+        </div>
+        <div class="footer-cta-email">Contact me</div>
+        <a href="mailto:hello@andrew.design" class="footer-email-link">hello@andrew.design</a>
+        <p style="margin-bottom: 24px; color:#333;">Hit me up if you're looking for a fast, reliable web-designer who can bring your vision to life</p>
+        <a href="contact.html" class="btn btn--dark">Book a call <span class="btn__icon" style="background:#333; color:white;">↗</span></a>
+      </div>
+
+      <div class="footer-social-grid">
+        <a href="#" class="social-box"><span>X/Twitter</span><div class="icon-circle-dark">𝕏</div></a>
+        <a href="#" class="social-box"><span>Instagram</span><div class="icon-circle-dark">IG</div></a>
+        <a href="#" class="social-box"><span>Dribbble</span><div class="icon-circle-dark">D</div></a>
+        <a href="#" class="social-box"><span>Behance</span><div class="icon-circle-dark">Be</div></a>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="navbar__logo" style="color:white; filter: grayscale(1) brightness(2);"><svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#85FF00"/><path d="M2 17l10 5 10-5" stroke="#85FF00" stroke-width="2"/><path d="M2 12l10 5 10-5" stroke="#85FF00" stroke-width="2"/></svg>Webstack</div>
+        <p>Copyright © Web Design and Development, 2024.</p>
+        <p>Created by Andrew Scott</p>
+      </div>
+
+    </div>
+  </footer>

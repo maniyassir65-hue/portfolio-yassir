@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+.DS_Store
+
+# Strapi
+backend/node_modules/
+backend/build/
+backend/.tmp/
+backend/.cache/
+backend/public/uploads/
+backend/.env
+
+# Local server files
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+seed_faqs.js

@@ -1,0 +1,162 @@
+/* ========= VARIABLES NEOMORPHISME ========= */
+:root {
+  --bg-color: #292d32;
+  --text-primary: #ffffff;
+  --text-secondary: #8c92a0;
+  --accent: #c8ff00;
+
+  /* Ombres Néomorphiques */
+  --neo-shadow: 6px 6px 12px #1d1f23, -6px -6px 12px #353b41;
+  --neo-shadow-hover: 4px 4px 8px #1d1f23, -4px -4px 8px #353b41;
+  --neo-shadow-inset: inset 6px 6px 12px #1d1f23, inset -6px -6px 12px #353b41;
+
+  /* Ombres pour les éléments en accent */
+  --neo-accent: 6px 6px 12px rgba(200, 255, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.05);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 30px;
+  --radius-round: 50%;
+
+  --font-family: 'Inter', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ========= RESET ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========= CLASSES UTILITAIRES NEOMORPHIQUES ========= */
+
+.neo-box {
+  background: var(--bg-color);
+  box-shadow: var(--neo-shadow);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neo-pressed {
+  background: var(--bg-color);
+  box-shadow: var(--neo-shadow-inset);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.neo-btn {
+  background: var(--bg-color);
+  box-shadow: var(--neo-shadow);
+  border-radius: var(--radius-lg);
+  padding: 12px 28px;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.neo-btn:hover {
+  box-shadow: var(--neo-shadow-hover);
+  transform: translateY(2px);
+}
+
+.neo-btn:active {
+  box-shadow: var(--neo-shadow-inset);
+  transform: translateY(4px);
+  color: var(--accent);
+}
+
+.neo-btn--accent {
+  background: var(--accent);
+  color: #111;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.neo-btn--accent:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.neo-btn--accent:active {
+  box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.neo-icon-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-round);
+  background: var(--bg-color);
+  box-shadow: var(--neo-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-secondary);
+  border: none;
+}
+
+.neo-icon-btn:hover {
+  color: var(--text-primary);
+  box-shadow: var(--neo-shadow-hover);
+}
+
+.neo-icon-btn:active {
+  box-shadow: var(--neo-shadow-inset);
+  color: var(--accent);
+}
+
+/* ========= LAYOUT ========= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.subheading {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.text-accent {
+  color: var(--accent);
+}

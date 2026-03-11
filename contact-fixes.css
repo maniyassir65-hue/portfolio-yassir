@@ -1,0 +1,87 @@
+/* ========= OVERRIDES / SPECIFIC PAGE STYLES ========= */
+
+/* Ensure dark footer styling applies fully, removing default bg-light */
+body.contact-page {
+    background: var(--bg-light);
+    /* the dark areas handle themselves via full-width containers */
+}
+
+/* Fix navbar overlapping the logo */
+.navbar__logo {
+    flex-shrink: 0;
+    /* Prevent the logo from shrinking */
+}
+
+.navbar__links {
+    display: flex;
+    gap: 32px;
+    flex: 1;
+    justify-content: center;
+    /* Center the links properly */
+}
+
+.navbar__right {
+    flex-shrink: 0;
+}
+
+/* Make inputs look exactly like framer (tall, light grey, precise rounding) */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: #F4F4F4;
+    /* Lighter grey matching framer */
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background: #EAEAEA;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #A0A0A0;
+    /* Soft placeholder */
+}
+
+/* Adjust button height and styling inside the form */
+.submit-btn {
+    background: #1A1A1A;
+    /* Almost pure black */
+    color: var(--bg-white);
+    border: none;
+    border-radius: 100px;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #000;
+    transform: scale(0.98);
+}
+
+/* FAQ Icon Hover specific for contact page */
+.faq-item:hover .faq-icon {
+    background: var(--text-dark);
+    color: white;
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+}
+
+.faq-icon {
+    transition: all 0.3s ease;
+}
