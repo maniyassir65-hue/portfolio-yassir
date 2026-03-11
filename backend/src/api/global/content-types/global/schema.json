@@ -1,0 +1,67 @@
+{
+    "kind": "singleType",
+    "collectionName": "globals",
+    "info": {
+        "singularName": "global",
+        "pluralName": "globals",
+        "displayName": "Global",
+        "description": "Global portfolio settings and personal info"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "fullName": {
+            "type": "string",
+            "default": "Andrew Scott"
+        },
+        "jobTitle": {
+            "type": "string",
+            "default": "Web-designer, developer"
+        },
+        "bio": {
+            "type": "text",
+            "default": "I'm Andrew, a passionate web designer with a love for creating visually stunning and user-friendly digital experiences."
+        },
+        "contactEmail": {
+            "type": "string",
+            "default": "hello@andrew.design"
+        },
+        "availableForFreelance": {
+            "type": "boolean",
+            "default": true
+        },
+        "profilePicture": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "xLink": {
+            "type": "string",
+            "default": "#"
+        },
+        "igLink": {
+            "type": "string",
+            "default": "#"
+        },
+        "dLink": {
+            "type": "string",
+            "default": "#"
+        },
+        "yearsOfExperience": {
+            "type": "integer",
+            "default": 8
+        },
+        "satisfiedClients": {
+            "type": "integer",
+            "default": 18
+        },
+        "projectsFinished": {
+            "type": "integer",
+            "default": 14
+        }
+    }
+}

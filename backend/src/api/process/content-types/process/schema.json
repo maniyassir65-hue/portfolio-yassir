@@ -1,0 +1,34 @@
+{
+    "kind": "collectionType",
+    "collectionName": "processes",
+    "info": {
+        "singularName": "process",
+        "pluralName": "processes",
+        "displayName": "Process Step",
+        "description": "Steps in the How It Works section"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "stepNumber": {
+            "type": "string",
+            "required": true
+        },
+        "badgeName": {
+            "type": "string",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "descriptionListItem": {
+            "type": "text"
+        },
+        "timeframe": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

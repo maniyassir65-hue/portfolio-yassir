@@ -1,0 +1,27 @@
+{
+    "kind": "collectionType",
+    "collectionName": "skills",
+    "info": {
+        "singularName": "skill",
+        "pluralName": "skills",
+        "displayName": "Skill",
+        "description": "Tech stack categories for the toolbox section"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "category": {
+            "type": "string",
+            "required": true
+        },
+        "technologies": {
+            "type": "text",
+            "required": true
+        }
+    }
+}
