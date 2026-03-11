@@ -1,6 +1,6 @@
 // script.js - CMS Integration & Interactivity
 
-const STRAPI_URL = 'http://localhost:1337'; // Change this when deploying the backend
+const STRAPI_URL = 'https://portfolio-yassir-production.up.railway.app'; // Live backend on Railway
 
 /**
  * Helper to fetch data from Strapi
