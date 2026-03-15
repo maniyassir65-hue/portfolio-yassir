@@ -446,7 +446,7 @@ function initContactForm() {
 
     try {
       const formData = new FormData(form);
-      const response = await fetch('https://formsubmit.co/ajax/maniyassir65@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/4e556091d8a4e5a32d6851c8beba1c9b', {
         method: 'POST',
         body: formData,
         headers: {
