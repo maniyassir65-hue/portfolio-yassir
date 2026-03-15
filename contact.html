@@ -371,9 +371,58 @@
                 <h2 class="faq-title">Got Questions?</h2>
             </div>
 
-            <div class="faq-list" id="faq-list">
-                <!-- FAQs will be injected here via CMS -->
-                <div style="text-align: center; color: #888; padding: 40px;">Loading FAQs...</div>
+            <div class="faq-list">
+                <!-- FAQ 01 -->
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <div class="faq-question">
+                            <span class="faq-number">01/</span> How do you integrate with existing technical teams or legacy systems?
+                        </div>
+                        <div class="faq-answer" style="display:none; color:#666; font-size:1.1rem; line-height:1.6; margin-top:8px; padding-left:45px;">
+                            I am comfortable working as a solo technical partner or integrating seamlessly with your in-house engineering team. For legacy systems, I specialize in gradual modernization—building robust APIs to connect old databases with modern, scalable frontends without disrupting your current daily operations.
+                        </div>
+                    </div>
+                    <div class="faq-icon" style="font-size:2rem; line-height:1;">+</div>
+                </div>
+
+                <!-- FAQ 02 -->
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <div class="faq-question">
+                            <span class="faq-number">02/</span> What is your typical development and delivery workflow?
+                        </div>
+                        <div class="faq-answer" style="display:none; color:#666; font-size:1.1rem; line-height:1.6; margin-top:8px; padding-left:45px;">
+                            I follow a strict engineering process: Architecture & Scoping first, followed by iterative agile development. I provide regular updates, dedicated staging environments for your team to test, and ensure the entire codebase is heavily documented before the final production deployment.
+                        </div>
+                    </div>
+                    <div class="faq-icon" style="font-size:2rem; line-height:1;">+</div>
+                </div>
+
+                <!-- FAQ 03 -->
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <div class="faq-question">
+                            <span class="faq-number">03/</span> Do you provide post-launch maintenance and infrastructure support?
+                        </div>
+                        <div class="faq-answer" style="display:none; color:#666; font-size:1.1rem; line-height:1.6; margin-top:8px; padding-left:45px;">
+                            Absolutely. Launching is only the first step. I offer ongoing retainer contracts for server monitoring, database scaling, security patch updates, and new feature integrations to ensure your software handles growth seamlessly.
+                        </div>
+                    </div>
+                    <div class="faq-icon" style="font-size:2rem; line-height:1;">+</div>
+                </div>
+
+                <!-- FAQ 04 -->
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <div class="faq-question">
+                            <span class="faq-number">04/</span> How do you structure pricing for your engineering services?
+                        </div>
+                        <div class="faq-answer" style="display:none; color:#666; font-size:1.1rem; line-height:1.6; margin-top:8px; padding-left:45px;">
+                            I focus on value and ROI, not just hours. Depending on your scope, I offer fixed-price milestones for clear, defined projects, or a monthly technical partnership retainer for ongoing development and CTO-level advisory. Let's book a call to discuss your specific technical bottlenecks.
+                        </div>
+                    </div>
+                    <div class="faq-icon" style="font-size:2rem; line-height:1;">+</div>
+                </div>
             </div>
         </div>
     </section>
@@ -489,6 +538,19 @@
     </footer>
 
     <script src="script.js?v=19"></script>
+    <script>
+        function toggleFaq(element) {
+            const answer = element.querySelector('.faq-answer');
+            const icon = element.querySelector('.faq-icon');
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                icon.textContent = '-';
+            } else {
+                answer.style.display = 'none';
+                icon.textContent = '+';
+            }
+        }
+    </script>
 </body>
 
 </html>
