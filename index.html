@@ -126,51 +126,53 @@
         </a>
       </div>
 
-      <div class="projects-grid">
+      <!-- ====== PROJECT CARDS ====== -->
+      <div style="display:flex; flex-direction:column; gap:24px; margin-top:48px;">
 
-        <!-- Project 1 -->
-        <a href="#" class="project-card">
-          <div class="project-meta">
-            <span class="project-category">{ Pottery artist portfolio }</span>
-            <span class="project-date">5/31/24</span>
+        <!-- PROJECT 1: School OS — Full dark card -->
+        <div style="background:#0D0D0D; border-radius:32px; overflow:hidden; border: 1px solid rgba(255,255,255,0.05);">
+          <!-- Image Block -->
+          <div style="padding: 60px 60px 0; background: #141414; display:flex; justify-content:center;">
+            <img src="assets/project-school-os.png" alt="School OS Dashboard"
+              style="width:100%; max-width: 900px; border-radius:12px 12px 0 0; display:block; box-shadow: 0 -10px 60px rgba(0,0,0,0.5);">
           </div>
-          <h3>SilverLynx Technologies</h3>
-          <p class="project-services">Web design & Web development</p>
-          <img src="assets/project-mobile.png" alt="SilverLynx" class="project-image" style="margin-top: 24px;">
-        </a>
-
-        <!-- Project 2 -->
-        <a href="#" class="project-card">
-          <div class="project-meta">
-            <span class="project-category">{ Artist Portfolio }</span>
-            <span class="project-date">8/8/24</span>
+          <!-- Info Block -->
+          <div style="padding: 40px 48px 48px; display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:start;">
+            <div>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                <span style="background:rgba(133,255,0,0.15); color:#85FF00; font-size:0.78rem; font-weight:700; padding:5px 14px; border-radius:100px; text-transform:uppercase; letter-spacing:1px;">Enterprise SaaS</span>
+                <span style="color:#555; font-size:0.85rem;">2024 — Present</span>
+              </div>
+              <h3 style="font-size:clamp(1.5rem, 2.5vw, 2rem); font-weight:600; color:white; line-height:1.2; margin-bottom:16px;">School OS: Enterprise ERP & SaaS</h3>
+              <p style="color:#888; font-size:1rem; line-height:1.75; margin-bottom:0;">
+                A high-performance, multi-tenant SaaS platform for institutional management. Built for large-scale universities with a 360° ecosystem — connecting administration, faculty, students, and parents in real-time. Every module is plug-and-play.
+              </p>
+            </div>
+            <div style="padding-top:8px;">
+              <p style="color:#555; font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:16px;">Tech Stack</p>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px;">
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">Laravel 11</span>
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">React 19</span>
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">Flutter</span>
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">PostgreSQL</span>
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">Redis</span>
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">Docker</span>
+                <span style="background:#1A1A1A; border:1px solid #2a2a2a; color:#ccc; font-size:0.82rem; font-weight:500; padding:6px 16px; border-radius:100px;">TypeScript</span>
+              </div>
+              <a href="contact.html" style="display:inline-flex; align-items:center; gap:10px; background:#85FF00; color:#000; font-weight:700; font-size:0.9rem; padding:14px 28px; border-radius:100px; text-decoration:none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                Request case study
+                <span>↗</span>
+              </a>
+            </div>
           </div>
-          <h3>Evergreen Solutions</h3>
-          <p class="project-services">Web design & Web development</p>
-          <img src="assets/project-ecommerce.png" alt="Evergreen" class="project-image" style="margin-top: 24px;">
-        </a>
-
-        <!-- CTA Card -->
-        <a href="#projects" class="projects-cta-card">
-          <h3>View all projects</h3>
-          <div class="icon-circle-dark">↗</div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="#" class="project-card">
-          <img src="assets/project-laptop.png" alt="Project 3" class="project-image" style="margin-bottom: 24px;">
-          <div class="project-meta">
-            <span class="project-category">{ Mobile app }</span>
-            <span class="project-date">6/20/24</span>
-          </div>
-          <h3>EchoStream Entertainment</h3>
-          <p class="project-services">UI/UX design</p>
-        </a>
+        </div>
 
       </div>
 
     </div>
   </section>
+
+
 
   <!-- ========= PRODUCTS & BOILERPLATES ========= -->
   <section class="products" id="products" style="padding: 100px 0; background: var(--bg-white);">
