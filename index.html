@@ -281,37 +281,49 @@
         </div>
       </div>
 
-      <div class="toolbox-grid" style="display: flex; flex-direction:column; gap:24px;">
-        <div class="tool-card"
-          style="background:var(--bg-white); padding:32px; border-radius:var(--radius-lg); display:flex; gap:32px; align-items:center;">
-          <div class="tool-icon"
-            style="background:#E6E0FF; color:#4A2FE4; width:64px; height:64px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:800;">
-            F</div>
-          <div class="tool-info" style="flex:1;">
-            <h3 style="font-size:1.5rem; font-weight:500;">Framer</h3>
-            <p style="color:var(--text-light); font-size:1rem;">No-code website builder</p>
-            <div class="tool-bar-wrapper"
-              style="background:rgba(0,0,0,0.05); height:16px; border-radius:8px; margin-top:16px;">
-              <div class="tool-bar" style="width: 80%; background:var(--lime); height:100%; border-radius:8px;"></div>
-            </div>
+      <div class="toolbox-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+
+        <!-- Card 1: Backend & Logic -->
+        <div style="background:var(--bg-white); padding:40px; border-radius:32px; border: 1px solid rgba(0,0,0,0.05); display:flex; flex-direction:column; gap:24px; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div>
+            <span style="color:#888; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:8px;">BACKEND & LOGIC</span>
+            <h3 style="font-size:1.8rem; font-weight:600; color:var(--text-dark); line-height:1.2;">Core Systems & APIs</h3>
           </div>
-          <span class="tool-percent-pill" style="font-size:1.25rem; font-weight:500;">80%</span>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:auto;">
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Python</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Laravel 11</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Node.js</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Java</span>
+          </div>
         </div>
 
-        <div class="tool-card"
-          style="background:var(--bg-white); padding:32px; border-radius:var(--radius-lg); display:flex; gap:32px; align-items:center;">
-          <div class="tool-icon"
-            style="background:#E0FAFF; color:#00D1FF; width:64px; height:64px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:800;">
-            Fi</div>
-          <div class="tool-info" style="flex:1;">
-            <h3 style="font-size:1.5rem; font-weight:500;">Figma</h3>
-            <p style="color:var(--text-light); font-size:1rem;">Leading collaborative design tool</p>
-            <div class="tool-bar-wrapper"
-              style="background:rgba(0,0,0,0.05); height:16px; border-radius:8px; margin-top:16px;">
-              <div class="tool-bar" style="width: 90%; background:var(--lime); height:100%; border-radius:8px;"></div>
-            </div>
+        <!-- Card 2: Frontend & Mobile -->
+        <div style="background:var(--bg-white); padding:40px; border-radius:32px; border: 1px solid rgba(0,0,0,0.05); display:flex; flex-direction:column; gap:24px; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div>
+            <span style="color:#888; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:8px;">FRONTEND & MOBILE</span>
+            <h3 style="font-size:1.8rem; font-weight:600; color:var(--text-dark); line-height:1.2;">Client-Side & Cross-Platform</h3>
           </div>
-          <span class="tool-percent-pill" style="font-size:1.25rem; font-weight:500;">90%</span>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:auto;">
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">React.js</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">TypeScript</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">TailwindCSS</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Flutter (Dart)</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Database, Data & DevOps -->
+        <div style="background:var(--bg-white); padding:40px; border-radius:32px; border: 1px solid rgba(0,0,0,0.05); display:flex; flex-direction:column; gap:24px; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div>
+            <span style="color:#888; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:8px;">DATABASE, DATA & DEVOPS</span>
+            <h3 style="font-size:1.8rem; font-weight:600; color:var(--text-dark); line-height:1.2;">Infrastructure & Automation</h3>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:auto;">
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">PostgreSQL</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">MongoDB</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Redis</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">Docker</span>
+            <span style="background:#F3F4F6; color:#111; font-size:0.85rem; font-weight:600; padding:8px 16px; border-radius:100px;">BeautifulSoup/Selenium</span>
+          </div>
         </div>
 
       </div>
